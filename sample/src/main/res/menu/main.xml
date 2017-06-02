@@ -10,4 +10,14 @@
     android:title="@string/hide_empty_sections"
     app:showAsAction="never"/>
 
+  <item
+      android:id="@+id/collapse_all"
+      android:title="@string/collapse_all"
+      app:showAsAction="never"/>
+
+  <item
+      android:id="@+id/expand_all"
+      android:title="@string/expand_all"
+      app:showAsAction="never"/>
+
 </menu>

@@ -110,6 +110,20 @@ class PositionManager implements SectionedViewHolder.PositionDelegate {
     collapsedSectionMap.put(section, true);
   }
 
+  void collapseAll(ItemProvider itemProvider) {
+    int sectionCount = itemProvider.getSectionCount();
+    for (int section = 0; section < sectionCount; section++) {
+      collapsedSectionMap.put(section, true);
+    }
+  }
+
+  void expandAll(ItemProvider itemProvider) {
+    int sectionCount = itemProvider.getSectionCount();
+    for (int section = 0; section < sectionCount; section++) {
+      collapsedSectionMap.remove(section);
+    }
+  }
+
   void toggleSectionExpanded(int section) {
     if (collapsedSectionMap.get(section) != null) {
       expandSection(section);

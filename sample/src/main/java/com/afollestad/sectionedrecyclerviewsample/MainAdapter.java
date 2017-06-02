@@ -32,6 +32,11 @@ class MainAdapter extends SectionedRecyclerViewAdapter<MainAdapter.MainVH> {
     }
   }
 
+  public void toggleAll(boolean isExpandAll) {
+    if(isExpandAll) expandAll();
+    else collapseAll();
+  }
+
   @Override
   public void onBindHeaderViewHolder(MainVH holder, int section, boolean expanded) {
     holder.title.setText(String.format("Section %d", section));

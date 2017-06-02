@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
       adapter.notifyDataSetChanged();
       item.setChecked(hideEmpty);
       return true;
+    } else if(item.getItemId() == R.id.collapse_all) {
+      adapter.toggleAll(false);
+    } else if(item.getItemId() == R.id.expand_all) {
+      adapter.toggleAll(true);
     }
     return super.onOptionsItemSelected(item);
   }

@@ -298,4 +298,18 @@ public abstract class SectionedRecyclerViewAdapter<VH extends SectionedViewHolde
   public final void onBindViewHolder(VH holder, int position, List<Object> payloads) {
     super.onBindViewHolder(holder, position, payloads);
   }
+
+  public PositionManager getPositionManager() {
+    return positionManager;
+  }
+
+  public void collapseAll() {
+    positionManager.collapseAll(this);
+    notifyDataSetChanged();
+  }
+
+  public void expandAll() {
+    positionManager.expandAll(this);
+    notifyDataSetChanged();
+  }
 }
